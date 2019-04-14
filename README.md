@@ -4,6 +4,7 @@
 <div align='center'>
   <img src='./SethIndustriesIcon.png' alt='Seth Industries Icon'>
 </div>
+<hr />
 <p align='center'>
   <a href='https://www.sethindustries.com.au'>
     Website
