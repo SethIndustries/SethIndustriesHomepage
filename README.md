@@ -15,7 +15,7 @@
   </a>
 </p>
 <p align='center'>
-  <a href='mailto:contact@sethindustries.com.au'
+  <a href='mailto:contact@sethindustries.com.au'>
     Email
   </a>
 </p>
