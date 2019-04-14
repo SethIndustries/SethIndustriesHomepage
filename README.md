@@ -1,18 +1,23 @@
 <h1 align='center'>
   Seth Industries Homepage
 </h1>
-<hr />
 <div align='center'>
   <img src='./SethIndustriesIcon.png' alt='Seth Industries Icon'>
 </div>
 <p align='center'>
-  Website: [www.sethindustries.com](https://www.sethindustries.com.au)
+  <a href='https://www.sethindustries.com.au'>
+    Website
+  </a>
 </p>
 <p align='center'>
-  Github: [www.github.com/SethIndustries](https://github.com/SethIndustries)
+  <a href='https://www.github.com/SethIndustries'>
+    Github
+  </a>
 </p>
 <p align='center'>
-  Email: <contact@sethindustries.com.au>
+  <a href='mailto:contact@sethindustries.com.au'
+    Email
+  </a>
 </p>
 <hr />
 
