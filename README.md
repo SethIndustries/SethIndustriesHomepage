@@ -30,8 +30,7 @@ Based on Gatsby Starter Dimension https://gatsby-dimension.surge.sh/
 
 ## Development
 
-    $ sudo npm install --global gatsby-cli
-    $ npm install
+    $ sudo yarn install
     $ gatsby develop
 
 ## Test Production on Local
