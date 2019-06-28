@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Tween, Timeline } from 'react-gsap'
-import {TweenMax, Power2, TimelineLite} from "gsap/TweenMax";
+import { TweenMax, Power2, TimelineMax } from "gsap/TweenMax";
 
 import '../assets/css/mystyles.css'
 
@@ -10,20 +10,25 @@ class HomePage extends React.Component {
     super(props);
     // reference to the DOM node
     this.myElTitle = null;
+    this.myElTitle2 = null;
     // reference to the animation
-    this.myTwTitle = null;
+    this.myTwTimeline = new TimelineMax({paused: true}).bind(this);
   }
 
   componentDidMount(){
     // use the node ref to create the animation
     // this.myTwTitle = TweenLite.to(this.myElTitle, 1, {x: 100, y: 100});
-    TweenMax.to(this.myElTitle, 1, {x: 100, y: 100});
+    myTwTimeline
+      .to(this.myElTitle, 1, {x: 100, y: 100})
+      .to(this.myElTitle2, 1, {x: 100, y: 100})
+      .play()
   }
 
   render() {
     return (
       <div>
-        <h1 ref={div => this.myElTitle = div}>Get around me</h1>
+        <h1 ref={div => this.myElTitle = div}>Seth</h1>
+        <h1 ref={div => this.myElTitle2 = div}>Industries</h1>
         <Timeline
           target={
             <p className="title-text">Seth Industries</p>
