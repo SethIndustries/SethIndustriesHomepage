@@ -8,7 +8,10 @@ container {
 }
 
 .title {
-  text-align: center;  
+  text-align: center;
+  color: black;
+  z-index: 1;
+  position: inherit;
 }
 
 .title-text {
@@ -19,7 +22,7 @@ container {
   margin-top: 49vh;
   margin-bottom: auto;
   color: red;
-  z-index: 1;
+  z-index: ;
 }
 
 .splitter-rect {
@@ -28,4 +31,5 @@ container {
   width: 2px;
   background-color: #ffffff;
   position: relative;
+  z-index: 0;
 }

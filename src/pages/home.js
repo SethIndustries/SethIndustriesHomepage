@@ -9,6 +9,7 @@ class HomePage extends React.Component {
   constructor(props){
     super(props);
     // reference to the DOM node
+    this.myElSplitterRect = null;
     this.myElTitle = null;
     this.myElTitle2 = null;
     // reference to the animation
@@ -19,6 +20,8 @@ class HomePage extends React.Component {
     // use the node ref to create the animation
     // this.myTwTitle = TweenLite.to(this.myElTitle, 1, {x: 100, y: 100});
     this.myTwTimeline
+      .fromTo(this.myElSplitterRect, 1, {height: "0px"}, {height: "1000px"})
+      .fromTo(this.myElSplitterRect, 1, {width: "2px"}, {width: "1000px"})
       .fromTo(this.myElTitle, 1, {y: -20, opacity: 0}, {y: 0, opacity: 1})
       .fromTo(this.myElTitle2, 1, {y: -20, opacity: 0}, {y: 0, opacity: 1})
       .play()
@@ -27,25 +30,10 @@ class HomePage extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="title" ref={div => this.myElTitle = div}>Seth</h1>
-        <h1 className="title" ref={div => this.myElTitle2 = div}>Industries</h1>
-        <Timeline
-          target={
-            <p className="title-text">Seth Industries</p>
-          }
-        >
-          <Tween duration={4} />
-          <Tween duration={3} from={{ opacity: 0 }} to={{ opacity: 1 }} />
-        </Timeline>
-        <Timeline
-          target={
-            <div className="splitter-rect" />
-          }
-        >
-          <Tween duration={2} from={{ height: "0px" }} to={{ height: "1000px" }} />
-          <Tween duration={2} from={{ width: "2px" }} to={{ width: "1000px" }} />
-        </Timeline>
-
+        <div className="splitter-rect" ref={div => this.myElSplitterRect = div}>
+          <h1 className="title" ref={div => this.myElTitle = div}>Seth</h1>
+          <h1 className="title" ref={div => this.myElTitle2 = div}>Industries</h1>
+        </div>
       </div>
     )
   }
