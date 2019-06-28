@@ -10,6 +10,7 @@ class HomePage extends React.Component {
     super(props);
     // reference to the DOM node
     this.myElSplitterRect = null;
+    this.myElIcon = null;
     this.myElTitle = null;
     this.myElTitle2 = null;
     // reference to the animation
@@ -21,9 +22,13 @@ class HomePage extends React.Component {
     // this.myTwTitle = TweenLite.to(this.myElTitle, 1, {x: 100, y: 100});
     this.myTwTimeline
       .fromTo(this.myElSplitterRect, 1, {height: "0px"}, {height: "1000px"})
-      .fromTo(this.myElSplitterRect, 1, {width: "2px"}, {width: "1000px"})
-      .fromTo(this.myElTitle, 1, {y: -20, opacity: 0}, {y: 0, opacity: 1})
-      .fromTo(this.myElTitle2, 1, {y: -20, opacity: 0}, {y: 0, opacity: 1})
+      .fromTo(this.myElSplitterRect, 1, {width: "0.3%"}, {width: "100%"})
+      .fromTo(this.myElIcon, 1, {y: -20, opacity: 0}, {y: 0, opacity: 1})
+      .staggerFromTo([
+          this.myElTitle,
+          this.myElTitle2
+        ], 1, {y: -20, opacity: 0}, {y: 0, opacity: 1}, 0.5
+      )
       .play()
   }
 
@@ -31,6 +36,11 @@ class HomePage extends React.Component {
     return (
       <div>
         <div className="splitter-rect" ref={div => this.myElSplitterRect = div}>
+          <img
+            ref={div => this.myElIcon = div}
+            className="icon"
+            src={require('./../images/icon.svg')}
+            />
           <h1 className="title" ref={div => this.myElTitle = div}>Seth</h1>
           <h1 className="title" ref={div => this.myElTitle2 = div}>Industries</h1>
         </div>

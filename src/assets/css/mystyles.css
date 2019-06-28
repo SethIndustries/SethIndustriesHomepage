@@ -14,6 +14,15 @@ container {
   position: inherit;
 }
 
+.icon {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 25vh;
+}
+
 .title-text {
   height: 100%;
   width: 100%;
