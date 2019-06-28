@@ -36,13 +36,15 @@ class HomePage extends React.Component {
     return (
       <div>
         <div className="splitter-rect" ref={div => this.myElSplitterRect = div}>
-          <img
-            ref={div => this.myElIcon = div}
-            className="icon"
-            src={require('./../images/icon.svg')}
-            />
-          <h1 className="title" ref={div => this.myElTitle = div}>Seth</h1>
-          <h1 className="title" ref={div => this.myElTitle2 = div}>Industries</h1>
+          <div className="inner-content">
+            <img
+              ref={div => this.myElIcon = div}
+              className="icon"
+              src={require('./../images/icon.svg')}
+              />
+            <h1 className="title" ref={div => this.myElTitle = div}>Seth</h1>
+            <h1 className="title" ref={div => this.myElTitle2 = div}>Industries</h1>
+          </div>
         </div>
       </div>
     )

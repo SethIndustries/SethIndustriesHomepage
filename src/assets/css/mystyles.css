@@ -7,6 +7,24 @@ container {
   width: 100%;
 }
 
+.splitter-rect {
+  margin: auto;
+  height: 100%;
+  width: 2px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 0;
+}
+
+.inner-content {
+  height: 100%;
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
 .title {
   text-align: center;
   color: black;
@@ -16,10 +34,6 @@ container {
 
 .icon {
   display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
   max-height: 25vh;
 }
 
@@ -32,13 +46,4 @@ container {
   margin-bottom: auto;
   color: red;
   z-index: ;
-}
-
-.splitter-rect {
-  margin: auto;
-  height: 100%;
-  width: 2px;
-  background-color: #ffffff;
-  position: relative;
-  z-index: 0;
 }
