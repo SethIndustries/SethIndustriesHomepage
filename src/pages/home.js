@@ -7,15 +7,25 @@ import '../assets/css/mystyles.css'
 class HomePage extends React.Component {
   render() {
     return (
-      <Layout location={this.props.location}>
-        <Tween duration={2} from={{ height: "0%" }} to={{ height: "100%" }}>
+      <div>
+      <Timeline
+        target={
+          <p className="title-text">Seth Industries</p>
+        }
+      >
+        <Tween duration={4} />
+        <Tween duration={3} from={{ opacity: 0 }} to={{ opacity: 1 }} />
+      </Timeline>
+      <Timeline
+        target={
           <div className="splitter-rect" />
-        </Tween>
-        <h1>My text here</h1>
-        <Tween duration={2} from={{ height: "0%" }} to={{ height: "100%" }}>
-          <div className="splitter-rect" />
-        </Tween>
-      </Layout>
+        }
+      >
+        <Tween duration={2} from={{ height: "0px" }} to={{ height: "1000px" }} />
+        <Tween duration={2} from={{ width: "2px" }} to={{ width: "1000px" }} />
+      </Timeline>
+
+      </div>
     )
   }
 }

@@ -7,9 +7,21 @@ container {
   width: 100%;
 }
 
+.title-text {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  margin-top: 49vh;
+  margin-bottom: auto;
+  color: red;
+  z-index: 1;
+}
+
 .splitter-rect {
   margin: auto;
   height: 100%;
-  width: 10px;
+  width: 2px;
   background-color: #ffffff;
+  position: relative;
 }
