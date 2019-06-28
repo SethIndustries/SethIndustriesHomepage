@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Jeremy Ellingham",
   "dependencies": {
+    "framer": "^1.0.12",
     "gatsby": "^2.10.5",
     "gatsby-plugin-manifest": "^2.0.9",
     "gatsby-plugin-offline": "^2.0.16",
@@ -12,6 +13,7 @@
     "node-sass": "^4.11.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-gsap": "^1.2.0",
     "react-helmet": "^5.2.0"
   },
   "keywords": [

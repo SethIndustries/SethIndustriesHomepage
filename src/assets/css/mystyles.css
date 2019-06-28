@@ -1,0 +1,15 @@
+/* html {
+  background-color: white;
+} */
+
+container {
+  height: 100%;
+  width: 100%;
+}
+
+.splitter-rect {
+  margin: auto;
+  height: 100%;
+  width: 10px;
+  background-color: #ffffff;
+}
