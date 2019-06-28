@@ -12,23 +12,23 @@ class HomePage extends React.Component {
     this.myElTitle = null;
     this.myElTitle2 = null;
     // reference to the animation
-    this.myTwTimeline = new TimelineMax({paused: true}).bind(this);
+    this.myTwTimeline = new TimelineMax({paused: true})
   }
 
   componentDidMount(){
     // use the node ref to create the animation
     // this.myTwTitle = TweenLite.to(this.myElTitle, 1, {x: 100, y: 100});
-    myTwTimeline
-      .to(this.myElTitle, 1, {x: 100, y: 100})
-      .to(this.myElTitle2, 1, {x: 100, y: 100})
+    this.myTwTimeline
+      .fromTo(this.myElTitle, 1, {y: -20, opacity: 0}, {y: 0, opacity: 1})
+      .fromTo(this.myElTitle2, 1, {y: -20, opacity: 0}, {y: 0, opacity: 1})
       .play()
   }
 
   render() {
     return (
       <div>
-        <h1 ref={div => this.myElTitle = div}>Seth</h1>
-        <h1 ref={div => this.myElTitle2 = div}>Industries</h1>
+        <h1 className="title" ref={div => this.myElTitle = div}>Seth</h1>
+        <h1 className="title" ref={div => this.myElTitle2 = div}>Industries</h1>
         <Timeline
           target={
             <p className="title-text">Seth Industries</p>
