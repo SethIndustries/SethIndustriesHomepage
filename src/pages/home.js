@@ -23,7 +23,7 @@ class HomePage extends React.Component {
     this.myTwTimeline
       .fromTo(this.myElSplitterRect, 1, {height: "0px"}, {height: "1000px"})
       .fromTo(this.myElSplitterRect, 1, {width: "0.3%"}, {width: "100%"})
-      .fromTo(this.myElIcon, 1, {y: -20, opacity: 0}, {y: 0, opacity: 1})
+      .fromTo(this.myElIcon, 1.3, {x: 60, opacity: 0}, {x: 0, opacity: 1})
       .staggerFromTo([
           this.myElTitle,
           this.myElTitle2
@@ -42,8 +42,10 @@ class HomePage extends React.Component {
               className="icon"
               src={require('./../images/icon.svg')}
               />
-            <h1 className="title" ref={div => this.myElTitle = div}>Seth</h1>
-            <h1 className="title" ref={div => this.myElTitle2 = div}>Industries</h1>
+              <div className="title-content">
+                <h1 className="title" ref={div => this.myElTitle = div}>Seth</h1>
+                <h1 className="title" ref={div => this.myElTitle2 = div}>Industries</h1>
+              </div>
           </div>
         </div>
       </div>

@@ -19,31 +19,35 @@ container {
 .inner-content {
   height: 100%;
   display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-  flex-direction: column;
+  flex-direction: row;
 
   justify-content: center;
   align-items: center;
 }
 
-.title {
-  text-align: center;
-  color: black;
-  z-index: 1;
-  position: inherit;
-}
-
 .icon {
   display: block;
+  float: left;
   max-height: 25vh;
+  padding-right: 1vh;
+  padding-left: 1vh;
 }
 
-.title-text {
+.title-content {
   height: 100%;
-  width: 100%;
-  position: fixed;
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding-right: 1vh;
+  padding-left: 1vh;
+}
+
+.title {
+  color: black;
   text-align: center;
-  margin-top: 49vh;
-  margin-bottom: auto;
-  color: red;
-  z-index: ;
+  z-index: 1;
+  margin-bottom: 0px;
 }
