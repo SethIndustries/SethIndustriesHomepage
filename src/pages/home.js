@@ -15,6 +15,11 @@ class HomePage extends React.Component {
     this.myElTitle2 = null;
     // reference to the animation
     this.myTwTimeline = new TimelineMax({paused: true})
+
+    this.state = {
+      title: 'Seth',
+      title2: 'Industries'
+    }
   }
 
   componentDidMount(){
@@ -28,6 +33,32 @@ class HomePage extends React.Component {
           this.myElTitle,
           this.myElTitle2
         ], 1, {y: -20, opacity: 0}, {y: 0, opacity: 1}, 0.5
+      )
+      .staggerFromTo([
+          this.myElIcon,
+          this.myElTitle,
+          this.myElTitle2
+        ], 1, {y: 0}, {y: 20, opacity: 0}, 0.5
+      )
+      .add(() => { this.setState({ title: 'Custom', title2: 'Software' }); console.log('Woohoo!') } )
+      .staggerFromTo([
+          this.myElTitle,
+          this.myElTitle2
+        ], 1, {y: -20, opacity: 0}, {y: 0, opacity: 1}, 0.5
+      )
+      .staggerFromTo([
+          this.myElIcon,
+          this.myElTitle,
+          this.myElTitle2
+        ], 1, {y: 0}, {y: 20, opacity: 0}, 0.5
+      )
+      .add(() => { this.setState({ title: 'You ask.', title2: 'We deliver.' }) })
+      .fromTo(this.myElTitle, 3, {y: -20, opacity: 0}, {y: 0, opacity: 1})
+      .fromTo(this.myElTitle2, 3, {y: -20, opacity: 0}, {y: 0, opacity: 1})
+      .staggerFromTo([
+          this.myElTitle,
+          this.myElTitle2
+        ], 1, {y: 0}, {y: 20, opacity: 0}, 0.5
       )
       .play()
   }
@@ -43,8 +74,8 @@ class HomePage extends React.Component {
               src={require('./../images/icon.svg')}
               />
               <div className="title-content">
-                <h1 className="title" ref={div => this.myElTitle = div}>Seth</h1>
-                <h1 className="title" ref={div => this.myElTitle2 = div}>Industries</h1>
+                <h1 className="title" ref={div => this.myElTitle = div}>{this.state.title}</h1>
+                <h1 className="title" ref={div => this.myElTitle2 = div}>{this.state.title2}</h1>
               </div>
           </div>
         </div>
