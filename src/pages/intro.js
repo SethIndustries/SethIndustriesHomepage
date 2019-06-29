@@ -24,35 +24,35 @@ export default function IntroPage() {
           myElTitle2
         ], 1, {y: -20}, {y: 0, opacity: 1}, 0.5
       )
-      .staggerFromTo([
+      .to([
           myElIcon,
           myElTitle,
           myElTitle2
-        ], 1, {y: 0}, {y: 20, opacity: 0}, 0.5
+        ], 1.5, {opacity: 0}
       )
-      .to(myElIcon, 0, { display: 'none' })
       .add(() => { setTitle('Digital'); setTitle2('Products') })
+      .to(myElIcon, 1, {display: 'none'}) // Pause for dramatic effect
       .staggerFromTo([
           myElTitle,
           myElTitle2
         ], 1, {y: -20, opacity: 0}, {y: 0, opacity: 1}, 0.5
       )
-      .staggerFromTo([
-          myElIcon,
+      .to(myElIcon, 1, {display: 'none'}) // Pause for dramatic effect
+      .to([
           myElTitle,
           myElTitle2
-        ], 1, {y: 0}, {y: 20, opacity: 0}, 0.5
+        ], 2, {opacity: 0}
       )
       .add(() => { setTitle('You describe.'); setTitle2('We deliver.') })
-      .pause()
-      .fromTo(myElTitle, 1, {opacity: 0}, {opacity: 1})
+      .fromTo(myElTitle, 1, {y: -20, opacity: 0}, {y: 0, opacity: 1})
       .to(myElIcon, 1, {display: 'none'}) // Pause for dramatic effect
-      .fromTo(myElTitle2, 3, {opacity: 0}, {opacity: 1})
-      .staggerTo([
+      .fromTo(myElTitle2, 3, {y: -20, opacity: 0}, {y: 0, opacity: 1})
+      .to([
           myElTitle,
           myElTitle2
-        ], 1, {opacity: 0}, 0.5
+        ], 2, {opacity: 0}
       )
+      .to(myElIcon, 1, {display: 'none'}) // Pause for dramatic effect
       .add(() => { window.location.replace('/home') })
     myTwTimeline.play()
   }, [])
