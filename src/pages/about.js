@@ -73,7 +73,7 @@ export default function AboutPage() {
           <br />
           <br />
           <span ref={div => myElTextContent5 = div}>
-            Take a look at <b><u><Link to="/portfolio">some of our work</Link></u></b> or <b><u><Link to="/contact">get in touch</Link></u></b>.
+            Take a look at <b><u><Link to="/portfolio">some of our work</Link></u></b>, read up <b><u><Link to="/blog">on our design philosophy</Link></u></b> or <b><u><Link to="/contact">get in touch</Link></u></b>.
           </span>
         </p>
       </center>
