@@ -32,6 +32,7 @@ function IntroPage() {
             myElTitle2
           ], 1, {y: 0}, {y: 20, opacity: 0}, 0.5
         )
+        .to(myElIcon, 0, { display: 'none' })
         .add(() => { setTitle('Custom'); setTitle2('Software') })
         .staggerFromTo([
             myElTitle,
@@ -46,6 +47,7 @@ function IntroPage() {
         )
         .add(() => { setTitle('You ask.'); setTitle2('We deliver.') })
         .fromTo(myElTitle, 1, {opacity: 0}, {opacity: 1})
+        .to(myElIcon, 1, {display: 'none'}) // Pause for dramatic effect
         .fromTo(myElTitle2, 3, {opacity: 0}, {opacity: 1})
         .staggerFromTo([
             myElTitle,
@@ -68,11 +70,11 @@ function IntroPage() {
             className="icon"
             alt=''
             src={require('./../images/icon.svg')}
-            />
-            <div className="title-content">
-              <h1 className="title" ref={div => myElTitle = div}>{title}</h1>
-              <h1 className="title" ref={div => myElTitle2 = div}>{title2}</h1>
-            </div>
+          />
+          <div className="title-content">
+            <h1 className="title" ref={div => myElTitle = div}>{title}</h1>
+            <h1 className="title" ref={div => myElTitle2 = div}>{title2}</h1>
+          </div>
         </div>
       </div>
     </div>
