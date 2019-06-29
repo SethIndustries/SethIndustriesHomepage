@@ -1,10 +1,27 @@
 .portfolio-grid {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
+  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 .portfolio-grid-left {
-  /* width: 50px; */
+  text-align: right;
+  ul {
+    position: relative;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.2em;
+  }
+  ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+}
+
+.portfolio-grid-middle {
+// Add something
 }
 
 .portfolio-grid-right {
