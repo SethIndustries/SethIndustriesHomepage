@@ -52,4 +52,5 @@ container {
   text-align: center;
   z-index: 1;
   margin-bottom: 0px;
+  opacity: 0;
 }

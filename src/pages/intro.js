@@ -24,7 +24,7 @@ function IntroPage() {
         .staggerFromTo([
             myElTitle,
             myElTitle2
-          ], 1, {y: -20, opacity: 0}, {y: 0, opacity: 1}, 0.5
+          ], 1, {y: -20}, {y: 0, opacity: 1}, 0.5
         )
         .staggerFromTo([
             myElIcon,
@@ -52,6 +52,7 @@ function IntroPage() {
             myElTitle2
           ], 1, {y: 0}, {y: 20, opacity: 0}, 0.5
         )
+        .to(myElSplitterRect, 1, {width: "0.3%"})
         .add(() => { window.location.replace('/home') })
         .pause()
     );
