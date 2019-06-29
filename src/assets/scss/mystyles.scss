@@ -1,0 +1,23 @@
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.portfolio-grid-left {
+  /* width: 50px; */
+}
+
+.portfolio-grid-right {
+  text-align: left;
+  ul {
+  	position: relative;
+  	list-style: none;
+  	margin-left: 0;
+  	padding-left: 1.2em;
+  }
+  ul li:before {
+  	content: "+";
+  	position: absolute;
+  	left: 0;
+  }
+}
