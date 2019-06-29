@@ -35,6 +35,14 @@ container {
   padding-left: 1vh;
 }
 
+.menu-icon {
+  width: 100%;
+  float: center;
+  max-height: 10vh;
+
+  opacity: 0;
+}
+
 .title-content {
   height: 100%;
   display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
@@ -48,6 +56,15 @@ container {
 }
 
 .title {
+  color: black;
+  text-align: center;
+  z-index: 1;
+  margin-bottom: 0px;
+  opacity: 0;
+}
+
+.small-title {
+  font-size: 10px;
   color: black;
   text-align: center;
   z-index: 1;
