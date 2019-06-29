@@ -31,8 +31,8 @@ const Menu = () => {
           <li><Link ref={div => myElMenuItem3 = div} to="/portfolio">Portfolio</Link></li>
           <li><Link ref={div => myElMenuItem4 = div} to="/about">About</Link></li>
           <li><Link ref={div => myElMenuItem5 = div} to="/blog">Blog</Link></li>
-          <li><a href="https://github.com/SethIndustries" target="_blank" ref={div => myElMenuItem6 = div}>Code</a></li>
-          <li><Link ref={div => myElMenuItem7 = div} to="/contact">Contact</Link></li>
+          <li><Link ref={div => myElMenuItem6 = div} to="/contact">Contact</Link></li>
+          <li><a href="https://github.com/SethIndustries" target="_blank" ref={div => myElMenuItem7 = div}>Code</a></li>
       </ul>
     </center>
   )
