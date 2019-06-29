@@ -1,11 +1,9 @@
 import React from 'react'
-import Layout from '../components/layout'
-import { Tween, Timeline } from 'react-gsap'
-import { TweenMax, Power2, TimelineMax } from "gsap/TweenMax";
+import { TimelineMax } from "gsap/TweenMax";
 
 import '../assets/css/mystyles.css'
 
-class HomePage extends React.Component {
+class IntroPage extends React.Component {
   constructor(props){
     super(props);
     // reference to the DOM node
@@ -24,7 +22,6 @@ class HomePage extends React.Component {
 
   componentDidMount(){
     // use the node ref to create the animation
-    // this.myTwTitle = TweenLite.to(this.myElTitle, 1, {x: 100, y: 100});
     this.myTwTimeline
       .fromTo(this.myElSplitterRect, 1, {height: "0px"}, {height: "1000px"})
       .fromTo(this.myElSplitterRect, 1, {width: "0.3%"}, {width: "100%"})
@@ -40,7 +37,7 @@ class HomePage extends React.Component {
           this.myElTitle2
         ], 1, {y: 0}, {y: 20, opacity: 0}, 0.5
       )
-      .add(() => { this.setState({ title: 'Custom', title2: 'Software' }); console.log('Woohoo!') } )
+      .add(() => { this.setState({ title: 'Custom', title2: 'Software' }) })
       .staggerFromTo([
           this.myElTitle,
           this.myElTitle2
@@ -53,13 +50,14 @@ class HomePage extends React.Component {
         ], 1, {y: 0}, {y: 20, opacity: 0}, 0.5
       )
       .add(() => { this.setState({ title: 'You ask.', title2: 'We deliver.' }) })
-      .fromTo(this.myElTitle, 3, {y: -20, opacity: 0}, {y: 0, opacity: 1})
-      .fromTo(this.myElTitle2, 3, {y: -20, opacity: 0}, {y: 0, opacity: 1})
+      .fromTo(this.myElTitle, 1, {y: -20, opacity: 0}, {y: 0, opacity: 1})
+      .fromTo(this.myElTitle2, 3, {y: -60, opacity: 0}, {y: 0, opacity: 1})
       .staggerFromTo([
           this.myElTitle,
           this.myElTitle2
         ], 1, {y: 0}, {y: 20, opacity: 0}, 0.5
       )
+      .add(() => { window.location.replace('/home') })
       .play()
   }
 
@@ -71,6 +69,7 @@ class HomePage extends React.Component {
             <img
               ref={div => this.myElIcon = div}
               className="icon"
+              alt=''
               src={require('./../images/icon.svg')}
               />
               <div className="title-content">
@@ -84,4 +83,4 @@ class HomePage extends React.Component {
   }
 }
 
-export default HomePage
+export default IntroPage
