@@ -11,6 +11,12 @@ container {
   opacity: 0;
 }
 
+
+.show-text {
+  opacity: 1;
+  color: #000000;
+}
+
 .text-block {
   max-width: 40rem;
   margin: 0 auto;

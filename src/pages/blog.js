@@ -8,7 +8,7 @@ export default function BlogPage() {
   return(
     <div className="white-background">
       <Menu />
-      <h1>Blog</h1>
+      <h1 className="show-text">Blog</h1>
     </div>
   )
 }

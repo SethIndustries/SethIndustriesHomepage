@@ -15,10 +15,11 @@ const Menu = () => {
   let myElMenuItem4 = useRef(null)
   let myElMenuItem5 = useRef(null)
   let myElMenuItem6 = useRef(null)
+  let myElMenuItem7 = useRef(null)
 
   useEffect(() => {
     new TimelineMax({paused: true})
-      .staggerFromTo([myElMenuItem, myElMenuItem2, myElMenuItem3, myElMenuItem4, myElMenuItem5, myElMenuItem6], 0.25, {y: -20}, {y: 0, opacity: 1}, 0.25)
+      .staggerFromTo([myElMenuItem, myElMenuItem2, myElMenuItem3, myElMenuItem4, myElMenuItem5, myElMenuItem6, myElMenuItem7], 0.25, {y: -20}, {y: 0, opacity: 1}, 0.25)
       .play()
   }, [])
 
@@ -30,7 +31,8 @@ const Menu = () => {
           <li><Link ref={div => myElMenuItem3 = div} to="/portfolio">Portfolio</Link></li>
           <li><Link ref={div => myElMenuItem4 = div} to="/about">About</Link></li>
           <li><Link ref={div => myElMenuItem5 = div} to="/blog">Blog</Link></li>
-          <li><Link ref={div => myElMenuItem6 = div} to="/contact">Contact</Link></li>
+          <li><a href="https://github.com/SethIndustries" target="_blank" ref={div => myElMenuItem6 = div}>Code</a></li>
+          <li><Link ref={div => myElMenuItem7 = div} to="/contact">Contact</Link></li>
       </ul>
     </center>
   )
