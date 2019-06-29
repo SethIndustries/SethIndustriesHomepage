@@ -24,13 +24,6 @@ export default function AboutPage() {
       .play()
   }, [])
 
-  // useEffect(() => {
-  //   console.log('running effect')
-  //   new TimelineMax({paused: true})
-  //     .staggerFromTo([myElTextHeader, myElTextContent], 0.25, {y: -20}, {y: 0, opacity: 1}, 0.25)
-  //     .play
-  // }, [])
-
   return(
     <div className="white-background">
       <Menu />
@@ -40,11 +33,19 @@ export default function AboutPage() {
         </h1>
         <p className='text-block left-align' >
           <span ref={div => myElTextContent = div}>
-            <b>Seth Industries</b> is a global agency that delivers <b>compelling and reliable digital products</b>.
+            <b>Seth Industries</b> is a technology agency that delivers <b>compelling and reliable digital products</b>.
           </span>
           <br />
           <br />
           <span ref={div => myElTextContent2 = div}>
+            Founded in <b>Canberra, Australia</b> in <b>2017</b>, we now work with companies around the world to build products for
+            <b> media, pharmaceuticals, construction, medicine, professional services</b> and others.
+            Our core business includes creation and maintenance for both <b>new and existing commercial software</b>,
+            <b>mobile apps</b>, <b>display websites</b> and more.
+          </span>
+          <br />
+          <br />
+          <span ref={div => myElTextContent3 = div}>
             From a technical background of web development in <b>JavaScript</b> and <b>Ruby</b>, we
             became specialized in solving commercial software problems – the ability to <b>add or fix features in any part of a software system</b>. We understand:
             <br />
@@ -56,7 +57,7 @@ export default function AboutPage() {
               <li>Databases, infrastructure and hosting</li>
             </ul>
           </span>
-          <span ref={div => myElTextContent3 = div}>
+          <span ref={div => myElTextContent4 = div}>
             The name comes from a {"founders'"} college joke about “Seth”,
             a mythical and charismatic individual highly regarded for his ability to <b>independently and consistently
             produce results instead of excuses</b>. The company and all its staff strives to live up to that standard and defy the reputation
@@ -64,11 +65,6 @@ export default function AboutPage() {
             and somewhat arcane process for even very technical business owners and product
             managers. Our aim is for owning a quality technical product (with our help) to feel the same as
             using one – <b>simple, clear and reliable</b>.
-          </span>
-          <br />
-          <br />
-          <span ref={div => myElTextContent4 = div}>
-            We now work with companies in a wide variety of industries on both <b>new and existing commercial software</b>, <b>mobile apps</b>, <b>display websites</b> and more.
           </span>
           <br />
           <br />

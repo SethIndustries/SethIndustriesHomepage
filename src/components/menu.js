@@ -30,7 +30,7 @@ const Menu = () => {
           <li><Link ref={div => myElMenuItem3 = div} to="/about">About</Link></li>
           <li><Link ref={div => myElMenuItem4 = div} to="/blog">Blog</Link></li>
           <li><Link ref={div => myElMenuItem5 = div} to="/contact">Contact</Link></li>
-          <li><a href="https://github.com/SethIndustries" target="_blank" ref={div => myElMenuItem6 = div}>Code</a></li>
+          <li><a href="https://github.com/SethIndustries" target="_blank" rel="noopener noreferrer" ref={div => myElMenuItem6 = div}>Code</a></li>
       </ul>
     </center>
   )
