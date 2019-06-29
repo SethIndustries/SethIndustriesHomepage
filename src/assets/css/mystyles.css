@@ -40,7 +40,7 @@ container {
 .icon {
   display: block;
   float: left;
-  max-height: 25vh;
+  max-height: 50vh;
 
   opacity: 0;
   padding-right: 1vh;
