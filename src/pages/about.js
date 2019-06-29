@@ -19,7 +19,7 @@ export default function AboutPage() {
       .staggerFromTo(
         [
           myElTextHeader, myElTextContent, myElTextContent2, myElTextContent3, myElTextContent4, myElTextContent5
-        ], 2, {y: -20, opacity: 0}, {y: 0, opacity: 1}, 0.25
+        ], 1, {y: -20, opacity: 0}, {y: 0, opacity: 1}, 0.25
       )
       .play()
   }, [])
