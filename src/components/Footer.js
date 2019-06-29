@@ -4,18 +4,19 @@ import { TimelineMax } from "gsap/TweenMax";
 import '../assets/css/menu.css'
 
 const Footer = () => {
-  // let myElIcon = useRef(null)
-  //
-  // useEffect(() => {
-  //   new TimelineMax({paused: true})
-  //     .staggerFromTo([myElMenuItem], 0.25, {y: -20}, {y: 0, opacity: 1}, 0.25)
-  //     .play()
-  // }, [])
+  let myElFooter = useRef(null)
+
+  useEffect(() => {
+    new TimelineMax({paused: true})
+      .fromTo(myElFooter, 2, {}, {}) // holding pattern
+      .fromTo(myElFooter, 1, {y: -20, opacity: 0}, {y: 0, opacity: 1})
+      .play()
+  }, [])
 
   return(
     <center>
       <footer>
-        <p>
+        <p ref={(div => myElFooter = div)}>
           Seth Industries Pty Ltd &copy; 2019 - ABN: &nbsp;
           <b>
             <u>
