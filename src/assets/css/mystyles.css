@@ -29,7 +29,7 @@ container {
 }
 
 .inner-content {
-  height: 100%;
+  height: 100vh;
   display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
   flex-direction: row;
 

@@ -1,4 +1,6 @@
-body {
+.black-background {
+  height: 100vh;
+  width: 100%;
   color: #000000;
   background-color: #000000;
 }
