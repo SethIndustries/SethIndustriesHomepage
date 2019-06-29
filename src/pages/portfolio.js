@@ -1,5 +1,6 @@
 import React from 'react'
 import Menu from '../components/menu'
+import Footer from '../components/Footer'
 
 import '../assets/css/mystyles.css'
 import '../assets/scss/mystyles.scss'
@@ -38,6 +39,7 @@ export default function HomePage() {
           </div>
         </div>
       </center>
+      <Footer />
     </div>
   )
 }

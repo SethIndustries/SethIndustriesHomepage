@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { TimelineMax } from "gsap/TweenMax";
 import Menu from '../components/menu'
+import Footer from '../components/Footer'
 import { Link } from 'gatsby'
 
 import '../assets/css/mystyles.css'
@@ -73,6 +74,7 @@ export default function AboutPage() {
           </span>
         </p>
       </center>
+      <Footer />
     </div>
   )
 }

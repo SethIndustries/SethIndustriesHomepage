@@ -24,7 +24,7 @@ container {
 .text-block {
   max-width: 40rem;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .left-align {
@@ -71,6 +71,8 @@ container {
   float: center;
   max-height: 10vh;
   max-height: 25vh;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
   opacity: 0;
 }

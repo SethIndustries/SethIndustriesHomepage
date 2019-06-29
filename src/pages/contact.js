@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { TimelineMax } from "gsap/TweenMax";
 import Menu from '../components/menu'
+import Footer from '../components/Footer'
 
 import '../assets/css/mystyles.css'
 import './white-background.css'
@@ -57,6 +58,7 @@ export default function ContactPage() {
           src={require('./../images/icon.svg')}
         />
       </center>
+      <Footer />
     </div>
   )
 }
