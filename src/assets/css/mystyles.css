@@ -13,10 +13,20 @@ container {
 
 .text-block {
   max-width: 40rem;
+  margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 .left-align {
   text-align: left;
+}
+
+.vertical-center {
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  flex: fill;
+  flex-direction: column;
+  margin: auto 0;
+  text-align: center;
 }
 
 .splitter-rect {

@@ -23,20 +23,16 @@ const Menu = () => {
   }, [])
 
   return(
-    <div>
+    <center>
       <ul id="menu">
-        <ul>
-          <center>
-            <li><Link ref={div => myElMenuItem = div} to="/home">Home</Link></li>
-            <li><Link ref={div => myElMenuItem2 = div} to="/intro">Intro</Link></li>
-            <li><Link ref={div => myElMenuItem3 = div} to="/portfolio">Portfolio</Link></li>
-            <li><Link ref={div => myElMenuItem4 = div} to="/about">About</Link></li>
-            <li><Link ref={div => myElMenuItem5 = div} to="/blog">Blog</Link></li>
-            <li><Link ref={div => myElMenuItem6 = div} to="/contact">Contact</Link></li>
-          </center>
-        </ul>
+          <li><Link ref={div => myElMenuItem = div} to="/home">Home</Link></li>
+          <li><Link ref={div => myElMenuItem2 = div} to="/intro">Intro</Link></li>
+          <li><Link ref={div => myElMenuItem3 = div} to="/portfolio">Portfolio</Link></li>
+          <li><Link ref={div => myElMenuItem4 = div} to="/about">About</Link></li>
+          <li><Link ref={div => myElMenuItem5 = div} to="/blog">Blog</Link></li>
+          <li><Link ref={div => myElMenuItem6 = div} to="/contact">Contact</Link></li>
       </ul>
-    </div>
+    </center>
   )
 }
 

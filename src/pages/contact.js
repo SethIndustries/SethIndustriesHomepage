@@ -32,7 +32,7 @@ export default function ContactPage() {
   return(
     <div className="white-background">
       <Menu />
-      <center>
+      <center className="vertical-center">
         <h1 className="transparent" ref={div => myElTextHeader = div}>
           Contact
         </h1>
