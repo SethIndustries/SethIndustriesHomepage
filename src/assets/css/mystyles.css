@@ -11,6 +11,11 @@ container {
   opacity: 0;
 }
 
+.text-block {
+  max-width: 50rem;
+  text-align: left;
+}
+
 .splitter-rect {
   margin: auto;
   height: 100%;
