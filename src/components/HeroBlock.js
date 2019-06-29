@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect } from 'react'
 import { TimelineMax } from "gsap/TweenMax";
 
 import '../assets/css/mystyles.css'
-import './black-background.css'
+import '../pages/black-background.css'
 
-export default function IntroPage() {
+export default function HeroBlock() {
   let myElSplitterRect = useRef(null)
   let myElIcon = useRef(null)
   let myElTitle = useRef(null)
@@ -16,7 +16,7 @@ export default function IntroPage() {
 
   useEffect(() => {
     myTwTimeline
-      .fromTo(myElSplitterRect, 1, {height: "0.3%"}, {height: "100%"})
+      .fromTo(myElSplitterRect, 2, {height: "0.3%"}, {height: "100%"})
       .fromTo(myElSplitterRect, 1, {width: "0.3%"}, {width: "100%"})
       .fromTo(myElIcon, 1.3, {x: 60, opacity: 0}, {x: 0, opacity: 1})
       .staggerFromTo([
@@ -53,7 +53,6 @@ export default function IntroPage() {
         ], 2, {opacity: 0}
       )
       .to(myElIcon, 1, {display: 'none'}) // Pause for dramatic effect
-      .add(() => { window.location.replace('/home') })
     myTwTimeline.play()
   }, [])
 

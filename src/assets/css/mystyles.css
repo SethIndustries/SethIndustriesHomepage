@@ -11,6 +11,12 @@ container {
   opacity: 0;
 }
 
+.hero-block {
+  min-height: 20rem;
+  max-height: 25rem;
+  color: red;
+  background-color: red;
+}
 
 .show-text {
   opacity: 1;
@@ -29,15 +35,14 @@ container {
 
 .vertical-center {
   display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-  flex: fill;
+  flex: 1;
   flex-direction: column;
-  margin: auto 0;
   text-align: center;
 }
 
 .splitter-rect {
   margin: auto;
-  height: 100%;
+  max-height: 25rem;
   width: 2px;
   background-color: #ffffff;
   position: relative;
@@ -45,8 +50,8 @@ container {
 }
 
 .inner-content {
-  height: 100vh;
   display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+  flex: 1;
   flex-direction: row;
 
   justify-content: center;
@@ -56,7 +61,7 @@ container {
 .icon {
   display: block;
   float: left;
-  max-height: 50vh;
+  max-height: 20rem;
 
   opacity: 0;
   padding-right: 1vh;
