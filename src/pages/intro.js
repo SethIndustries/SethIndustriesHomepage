@@ -31,7 +31,7 @@ export default function IntroPage() {
         ], 1, {y: 0}, {y: 20, opacity: 0}, 0.5
       )
       .to(myElIcon, 0, { display: 'none' })
-      .add(() => { setTitle('Custom'); setTitle2('Software') })
+      .add(() => { setTitle('Digital'); setTitle2('Products') })
       .staggerFromTo([
           myElTitle,
           myElTitle2

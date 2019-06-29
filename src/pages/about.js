@@ -35,10 +35,10 @@ export default function AboutPage() {
     <div className="white-background">
       <Menu />
       <center>
-        <h1 className='trasparent' ref={div => myElTextHeader = div}>
+        <h1 ref={div => myElTextHeader = div}>
           About
         </h1>
-        <p className='trasparent text-block' >
+        <p className='text-block left-align' >
           <span ref={div => myElTextContent = div}>
             <b>Seth Industries</b> is a global agency that delivers <b>compelling and reliable digital products</b>.
           </span>
