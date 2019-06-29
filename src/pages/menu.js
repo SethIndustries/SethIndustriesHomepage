@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { TimelineMax } from "gsap/TweenMax";
+import { Link } from "gatsby"
 
 import '../assets/css/menu.css'
 
@@ -46,10 +47,10 @@ const Menu = () => {
       <ul id="menu">
         <ul>
           <center>
-            <li><a ref={div => myElMenuItem = div} href="#">Home</a></li>
-            <li><a ref={div => myElMenuItem2 = div} href="#">Portfolio</a></li>
-            <li><a ref={div => myElMenuItem3 = div} href="#">About</a></li>
-            <li><a ref={div => myElMenuItem4 = div} href="#">Contact</a></li>
+            <li><Link ref={div => myElMenuItem = div} to="/intro">Intro</Link></li>
+            <li><Link ref={div => myElMenuItem2 = div} to="/portfolio">Portfolio</Link></li>
+            <li><Link ref={div => myElMenuItem3 = div} to="/about">About</Link></li>
+            <li><Link ref={div => myElMenuItem4 = div} to="/contact">Contact</Link></li>
           </center>
         </ul>
       </ul>

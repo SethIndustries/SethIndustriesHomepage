@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { TimelineMax } from "gsap/TweenMax";
+import React from 'react'
 import Menu from './menu'
 
 import '../assets/css/mystyles.css'

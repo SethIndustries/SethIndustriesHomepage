@@ -7,6 +7,10 @@ container {
   width: 100%;
 }
 
+.transparent {
+  opacity: 0;
+}
+
 .splitter-rect {
   margin: auto;
   height: 100%;
