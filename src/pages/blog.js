@@ -4,11 +4,11 @@ import Menu from '../components/menu'
 import '../assets/css/mystyles.css'
 import './white-background.css'
 
-export default function HomePage() {
+export default function BlogPage() {
   return(
     <div className="white-background">
       <Menu />
-      <h1>Home</h1>
+      <h1>Blog</h1>
     </div>
   )
 }

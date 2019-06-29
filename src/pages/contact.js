@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import { TimelineMax } from "gsap/TweenMax";
-import Menu from './menu'
+import Menu from '../components/menu'
 
 import '../assets/css/mystyles.css'
 import './white-background.css'
