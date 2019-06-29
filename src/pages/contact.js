@@ -17,15 +17,15 @@ export default function ContactPage() {
       .staggerFromTo(
         [
           myElTextHeader, myElTextContent, myElTextContent2, myElTextContent3
-        ], 4, {y: -20, opacity: 0}, {y: 0, opacity: 1}, 1
+        ], 2, {y: -20, opacity: 0}, {y: 0, opacity: 1}, 0.25
       )
       .play()
   }, [])
 
   useEffect(() => {
     new TimelineMax({paused: true})
-      .fromTo(myElIcon, 4.5, {}, {})
-      .fromTo(myElIcon, 2, {y: -20, opacity: 0}, {y: 0, opacity: 1})
+      .fromTo(myElIcon, 1.5, {}, {})
+      .fromTo(myElIcon, 1, {y: -20, opacity: 0}, {y: 0, opacity: 1})
       .play()
   }, [])
 
@@ -33,7 +33,7 @@ export default function ContactPage() {
     <div className="white-background">
       <Menu />
       <center>
-        <h1 ref={div => myElTextHeader = div}>
+        <h1 className="transparent" ref={div => myElTextHeader = div}>
           Contact
         </h1>
         <p className='text-block' >
