@@ -16,8 +16,6 @@ export default function HeroBlock() {
 
   useEffect(() => {
     myTwTimeline
-      .fromTo(myElSplitterRect, 2, {height: "0.3%"}, {height: "100%"})
-      .fromTo(myElSplitterRect, 1, {width: "0.3%"}, {width: "100%"})
       .fromTo(myElIcon, 1.3, {x: 60, opacity: 0}, {x: 0, opacity: 1})
       .staggerFromTo([
           myElTitle,
@@ -52,25 +50,28 @@ export default function HeroBlock() {
           myElTitle2
         ], 2, {opacity: 0}
       )
-      .to(myElIcon, 1, {display: 'none'}) // Pause for dramatic effect
+      .to(myElIcon, 1, {display: 'block'}) // Pause for dramatic effect
+      .add(() => { setTitle('Seth'); setTitle2('Industries') })
+      .fromTo(myElIcon, 1.3, {x: 60, opacity: 0}, {x: 0, opacity: 1})
+      .staggerFromTo([
+          myElTitle,
+          myElTitle2
+        ], 1, {y: -20}, {y: 0, opacity: 1}, 0.5
+      )
     myTwTimeline.play()
   }, [])
 
   return (
-    <div className="black-background">
-      <div className="splitter-rect" ref={div => myElSplitterRect = div}>
-        <div className="inner-content">
-          <img
-            ref={div => myElIcon = div}
-            className="icon"
-            alt=''
-            src={require('./../images/icon.svg')}
-          />
-          <div className="title-content">
-            <h1 className="title" ref={div => myElTitle = div}>{title}</h1>
-            <h1 className="title" ref={div => myElTitle2 = div}>{title2}</h1>
-          </div>
-        </div>
+    <div className="inner-content">
+      <img
+        ref={div => myElIcon = div}
+        className="icon"
+        alt=''
+        src={require('./../images/icon.svg')}
+      />
+      <div className="title-content">
+        <h1 className="title" ref={div => myElTitle = div}>{title}</h1>
+        <h1 className="title" ref={div => myElTitle2 = div}>{title2}</h1>
       </div>
     </div>
   )

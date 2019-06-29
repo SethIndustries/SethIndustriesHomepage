@@ -14,8 +14,6 @@ container {
 .hero-block {
   min-height: 20rem;
   max-height: 25rem;
-  color: red;
-  background-color: red;
 }
 
 .show-text {
