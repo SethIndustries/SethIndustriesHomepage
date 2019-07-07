@@ -32,6 +32,7 @@ Based on Gatsby Starter Dimension https://gatsby-dimension.surge.sh/
 
     $ sudo yarn install
     $ gatsby develop
+    $ git remote add heroku https://git.heroku.com/sethindustrieshomepage.git
 
 ## Test Production on Local
 
