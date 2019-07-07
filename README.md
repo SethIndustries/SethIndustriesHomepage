@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4dfe23c2-533a-44f5-b3ad-9ea1c623c2a3/deploy-status)](https://app.netlify.com/sites/jolly-mahavira-7109db/deploys)
+
 <h1 align='center'>
   Seth Industries Homepage
 </h1>
@@ -32,7 +34,6 @@ Based on Gatsby Starter Dimension https://gatsby-dimension.surge.sh/
 
     $ sudo yarn install
     $ gatsby develop
-    $ git remote add heroku https://git.heroku.com/sethindustrieshomepage.git
 
 ## Test Production on Local
 
@@ -43,4 +44,4 @@ Based on Gatsby Starter Dimension https://gatsby-dimension.surge.sh/
 
 ## Deploy
 
-    $ git push heroku master
+Site now hosted on Netlify.
